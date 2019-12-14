@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta title="Simple Dependency Injection Example">
+        <script type="module">
+            import '/examples/simple/index.js';
+        </script>
+    </head>
+    <body>
+        <template id="some-app-component-template">
+            <dependency-consumer></dependency-consumer>
+        </template>
+
+        <dependency-provider>
+            <some-app-component>
+                <!-- shadow DOM
+                    ↳ <dependency-consumer></dependency-consumer>
+                -->
+            </some-app-component>
+        </dependency-provider>
+    </body>
+</html>
