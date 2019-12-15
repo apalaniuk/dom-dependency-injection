@@ -9,24 +9,13 @@ module.exports = function (api) {
 			node: 'current',
 		},
 	};
-	const webpackPresetOpts = {
-		useBuiltIns: false,
-	};
 	const config = {
 		presets: [
 			[
 				'@babel/preset-env',
 				testPresetOpts,
 			],
-			[
-				'@babel/preset-typescript', {
-					allExtensions: true,
-				},
-			],
-		],
-		plugins: [
-			'@babel/plugin-proposal-class-properties',
-			'@babel/plugin-syntax-dynamic-import',
+			'@babel/preset-typescript',
 		],
 	};
 
